@@ -6,9 +6,6 @@ const PostCardMedium = ({image, children}) => {
     <Wrapper>
         {image && <PostImage img={image} />}
         <PostTitle>{children}</PostTitle>
-        <Tags>
-        <a href='#'>Behind the Scenes</a>, <a href='#'>Perspectives</a>
-        </Tags>
     </Wrapper>
   )
 }
@@ -44,18 +41,6 @@ const PostTitle = styled.div`
         text-decoration: underline;
         text-decoration-color: var(--dark-gray);
         text-decoration-thickness: 2px;
-        text-underline-offset: 2px;
-    }
-`
-
-const Tags = styled.div`
-    & a {
-        text-decoration: none;
-        color: var(--dark-gray);
-    }
-
-    & a:hover {
-        text-decoration: underline;
         text-underline-offset: 2px;
     }
 `

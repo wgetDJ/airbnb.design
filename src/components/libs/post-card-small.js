@@ -5,10 +5,7 @@ const PostCardSmall = ({image, children}) => {
   return (
     <Wrapper>
         {image && <PostImage img={image} />}
-        <PostTitle>{children}</PostTitle>
-        <Tags>
-            <a href='#'>Behind the Scenes</a>, <a href='#'>Perspectives</a>
-        </Tags>
+        <PostDetails>{children}</PostDetails>
     </Wrapper>
   )
 }
@@ -29,7 +26,7 @@ const PostImage = styled.div`
     background-size: cover;
 `
 
-const PostTitle = styled.div`
+const PostDetails = styled.div`
     font-size: 20px;
 
     & a {
@@ -44,18 +41,6 @@ const PostTitle = styled.div`
         text-decoration: underline;
         text-decoration-color: var(--dark-gray);
         text-decoration-thickness: 2px;
-        text-underline-offset: 2px;
-    }
-`
-
-const Tags = styled.div`
-    & a {
-        text-decoration: none;
-        color: var(--dark-gray);
-    }
-
-    & a:hover {
-        text-decoration: underline;
         text-underline-offset: 2px;
     }
 `
