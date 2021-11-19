@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import Header from "./libs/header";
 import LatestPost from "./libs/latestpost";
 import PostCardMedium from "./libs/post-card-medium";
+import PostCardSmall from "./libs/post-card-small";
 
 const Homepage = () => {
     return (
@@ -15,7 +16,12 @@ const Homepage = () => {
                 <PostCardMedium></PostCardMedium>
             </TwoGridWrapper>
             <ThreeGridWrapper>
-
+                <PostCardSmall></PostCardSmall>
+                <PostCardSmall></PostCardSmall>
+                <PostCardSmall></PostCardSmall>
+                <PostCardSmall></PostCardSmall>
+                <PostCardSmall></PostCardSmall>
+                <PostCardSmall></PostCardSmall>
             </ThreeGridWrapper>
         </>
     )

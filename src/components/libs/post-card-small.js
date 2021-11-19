@@ -19,12 +19,12 @@ export default PostCardSmall
 
 const Wrapper = styled.div`
     display: grid;
-    grid-gap: 30px;
+    grid-gap: 15px;
 `
 
 const PostImage = styled.div`
     width: 100%;
-    height: 380px;
+    height: 247px;
     background-image: url('./Leadership-archetypes-blog-header.png');
     background-repeat: no-repeat;
     background-position: 50%;
@@ -32,11 +32,11 @@ const PostImage = styled.div`
 `
 
 const PostTitle = styled.div`
-    font-size: 30px;
+    font-size: 20px;
 
     & a {
         text-decoration: none;
-        line-height: 40px;
+        line-height: 30px;
         color: var(--light-gray);
     }
     & a b {
