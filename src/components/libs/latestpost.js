@@ -11,9 +11,9 @@ const LatestPost = () => {
                     <b>Learning Lessons</b> How to build a Design education program for creative work
                 </a>
             </Title>
-            <WrittenBY>
+            <WrittenBy>
                 <a href='#'>Behind the Scenes</a>, <a href='#'>Perspectives</a>
-            </WrittenBY>
+            </WrittenBy>
         </PostDetails>
     </Wrapper>
   )
@@ -62,7 +62,7 @@ const Title = styled.div`
     }
 `
 
-const WrittenBY = styled.div`
+const WrittenBy = styled.div`
     margin-top: 30px;
     
     & a {
