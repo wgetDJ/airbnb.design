@@ -5,7 +5,10 @@ import PostCard from "./libs/post-card";
 
 const Homepage = () => {
     return (
-        <Header />
+        <>
+            <Header />
+            <LatestPost />
+        </>
     )
 }
 

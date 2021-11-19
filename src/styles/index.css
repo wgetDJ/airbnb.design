@@ -17,3 +17,8 @@ body {
     background-color: var(--white);
     color: var(--dark-gray);
 }
+
+.App {
+  width: 80vw;
+  margin: 30px auto;
+}

@@ -24,8 +24,6 @@ const Header = () => {
 export default Header
 
 const Wrapper = styled.div`
-    width: 80vw;
-    margin: 15px auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
 `
