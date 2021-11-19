@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const LatestPost = () => {
   return (
-    <>
+    <Wrapper>
         <PostImage />
         <PostDetails>
             <Title>
@@ -15,15 +15,19 @@ const LatestPost = () => {
                 <a href='#'>Behind the Scenes</a>, <a href='#'>Perspectives</a>
             </WrittenBY>
         </PostDetails>
-    </>
+    </Wrapper>
   )
 }
 
 export default LatestPost
 
+const Wrapper = styled.div`
+    width: calc(100% - 48px);
+    margin: 30px 24px;
+`
+
 const PostImage = styled.div`
-    width: 96%;
-    margin: 30px auto;
+    width: 100%;
     height: 600px;
     background-image: url('./WebHeaderLarge.png');
     background-repeat: no-repeat;
@@ -32,9 +36,9 @@ const PostImage = styled.div`
 `
 
 const PostDetails = styled.div`
-    width: 35%;
-    margin-left: 4%;
-    margin-top: -100px;
+    max-width: calc(50% - 24px);
+    margin-left: 24px;
+    margin-top: -80px;
     background-color: var(--white);
     padding: 40px;
 `
