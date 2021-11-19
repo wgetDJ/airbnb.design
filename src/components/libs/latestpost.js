@@ -1,20 +1,17 @@
 import React from 'react'
 import styled from 'styled-components'
+import Tag from './tag'
 
-const LatestPost = () => {
+const LatestPost = ({image, children}) => {
   return (
     <Wrapper>
-        <PostImage />
+        {image && <PostImage img={image} />}
         <PostDetails>
-            <Title>
-                <a href='#'>
-                    <b>Learning Lessons</b> How to build a Design education program for creative work
-                </a>
-            </Title>
-            <WrittenBy>
+            <Title>{children}</Title>
+            <Tags>
                 <a href='#'>Behind the Scenes</a>, <a href='#'>Perspectives</a>
-            </WrittenBy>
-        </PostDetails>
+            </Tags>
+            </PostDetails>
     </Wrapper>
   )
 }
@@ -29,7 +26,7 @@ const Wrapper = styled.div`
 const PostImage = styled.div`
     width: 100%;
     height: 600px;
-    background-image: url('./WebHeaderLarge.png');
+    background-image: url(${(props) => props.img});
     background-repeat: no-repeat;
     background-position: 50%;
     background-size: cover;
@@ -62,7 +59,7 @@ const Title = styled.div`
     }
 `
 
-const WrittenBy = styled.div`
+const Tags = styled.div`
     margin-top: 30px;
     
     & a {

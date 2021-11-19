@@ -1,16 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const PostCardMedium = () => {
+const PostCardMedium = ({image, children}) => {
   return (
     <Wrapper>
-        <PostImage></PostImage>
-        <PostTitle>
-            <a href='#'><b>Archetypes for creative leadership</b> How to define the behaviors you value</a>
-        </PostTitle>
-        <WrittenBy>
+        {image && <PostImage img={image} />}
+        <PostTitle>{children}</PostTitle>
+        <Tags>
         <a href='#'>Behind the Scenes</a>, <a href='#'>Perspectives</a>
-        </WrittenBy>
+        </Tags>
     </Wrapper>
   )
 }
@@ -25,7 +23,7 @@ const Wrapper = styled.div`
 const PostImage = styled.div`
     width: 100%;
     height: 380px;
-    background-image: url('./Leadership-archetypes-blog-header.png');
+    background-image: url(${(props) => props.img});
     background-repeat: no-repeat;
     background-position: 50%;
     background-size: cover;
@@ -50,7 +48,7 @@ const PostTitle = styled.div`
     }
 `
 
-const WrittenBy = styled.div`
+const Tags = styled.div`
     & a {
         text-decoration: none;
         color: var(--dark-gray);
