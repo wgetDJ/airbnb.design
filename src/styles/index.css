@@ -20,6 +20,7 @@ body {
 
 .App {
   width: 80vw;
+  min-width: 1200px;
   max-width: 1600px;
   margin: 30px auto;
 }
